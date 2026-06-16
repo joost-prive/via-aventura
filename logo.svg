@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Via Aventura">
+  <defs>
+    <linearGradient id="va-stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5ead3"/>
+      <stop offset="1" stop-color="#e6d3a8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="url(#va-stone)" stroke="#1a1a2e" stroke-width="3"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#1a1a2e" stroke-width="1" stroke-dasharray="2 4"/>
+  <path d="M55 145 Q100 115 145 145" fill="none" stroke="#1a1a2e" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M55 145 Q100 115 145 145" fill="none" stroke="#1a1a2e" stroke-width="1" stroke-linecap="round" stroke-dasharray="1 6" transform="translate(0 4)"/>
+  <text x="100" y="105" font-family="Cinzel, Georgia, serif" font-size="58" font-weight="700" text-anchor="middle" fill="#1a1a2e" letter-spacing="4">VA</text>
+  <text x="100" y="35" font-family="Cinzel, Georgia, serif" font-size="9" font-weight="600" text-anchor="middle" fill="#1a1a2e" letter-spacing="3">VIA AVENTURA</text>
+  <circle cx="100" cy="170" r="2.5" fill="#c8772b"/>
+</svg>

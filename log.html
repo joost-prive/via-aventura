@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Build log — Via Aventura</title>
+  <meta name="description" content="Automatisch overzicht van mijn recente GitHub-activiteit — commits, releases en nieuwe projecten." />
+  <link rel="canonical" href="https://viaaventura.nl/log.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#c0492a" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Build log — Via Aventura" />
+  <meta property="og:description" content="Automatisch overzicht van recente GitHub-activiteit van Joost van de Ven." />
+  <meta property="og:image" content="https://viaaventura.nl/og-image.jpg" />
+  <meta property="og:locale" content="nl_NL" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="page-mini">
+
+  <a href="#main" class="skip-link">Direct naar de inhoud</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Via Aventura — home">
+      <img src="/logo-256.png" alt="" class="brand-mark" />
+      <span class="brand-name">Via Aventura</span>
+    </a>
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
+      <a href="/#about">Over</a>
+      <a href="/#code">Code</a>
+      <a href="/#creatief">Creatief</a>
+      <a href="mailto:joost@viaaventura.nl">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" class="mini-wrap mini-wide">
+    <p class="mini-kicker">Build log</p>
+    <h1 class="mini-title">Wat er <em>gebeurt</em>.</h1>
+    <p class="mini-deck">
+      Een automatisch overzicht van mijn meest recente GitHub-activiteit:
+      commits, releases en nieuwe projecten. Direct uit de bron, geen tussenkomst.
+    </p>
+
+    <section class="log-feed" id="logFeed" aria-live="polite">
+      <p class="log-loading">GitHub-activiteit laden&hellip;</p>
+    </section>
+
+    <p style="margin-top:48px;">
+      <a href="/" class="mini-link">← Terug naar Via Aventura</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span><a href="mailto:joost@viaaventura.nl">joost@viaaventura.nl</a></span>
+      <span><a href="/log.html">Build log</a></span>
+      <span><a href="https://github.com/joost-prive/" target="_blank" rel="noopener">GitHub</a></span>
+      <span><a href="/privacy.html">Privacy &amp; colofon</a></span>
+      <span class="muted">© <span id="year"></span> · Via Aventura B.V. · KvK 00000000</span>
+    </div>
+  </footer>
+
+  <script>
+  (async () => {
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const feed = document.getElementById("logFeed");
+    if (!feed) return;
+
+    const USER = "joost-prive";
+    const CACHE_KEY = "va-log-events-v2";
+    const CACHE_MS = 60 * 60 * 1000; // 1 uur
+
+    // Try cache eerst
+    let events = null;
+    try {
+      const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+      if (cached && Date.now() - cached.ts < CACHE_MS) events = cached.events;
+    } catch {}
+
+    if (!events) {
+      try {
+        const r = await fetch(`https://api.github.com/users/${USER}/events/public?per_page=100`);
+        if (!r.ok) throw new Error(r.statusText);
+        events = await r.json();
+        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ events, ts: Date.now() })); } catch {}
+      } catch (err) {
+        feed.innerHTML = `<p class="log-error">GitHub-activiteit kon op dit moment niet geladen worden. Probeer het later nog eens, of bekijk <a href="https://github.com/${USER}/" target="_blank" rel="noopener">github.com/${USER}</a> direct.</p>`;
+        return;
+      }
+    }
+
+    const escapeHtml = (s) =>
+      String(s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+
+    const WANTED = new Set(["PushEvent","ReleaseEvent","CreateEvent","PullRequestEvent"]);
+    const filtered = events.filter((e) => {
+      if (!WANTED.has(e.type)) return false;
+      if (e.type === "CreateEvent") {
+        const rt = e.payload && e.payload.ref_type;
+        return rt === "repository" || rt === "tag";
+      }
+      return true;
+    });
+
+    if (filtered.length === 0) {
+      feed.innerHTML = `<p class="log-error">Geen recente openbare activiteit gevonden. Bekijk <a href="https://github.com/${USER}/" target="_blank" rel="noopener">github.com/${USER}</a>.</p>`;
+      return;
+    }
+
+    // Groepeer op datum (lokale tijdzone)
+    const byDate = new Map();
+    for (const ev of filtered) {
+      const d = new Date(ev.created_at);
+      const key = d.getFullYear() + "-" +
+                  String(d.getMonth() + 1).padStart(2, "0") + "-" +
+                  String(d.getDate()).padStart(2, "0");
+      if (!byDate.has(key)) byDate.set(key, []);
+      byDate.get(key).push(ev);
+    }
+    const sortedDates = [...byDate.keys()].sort().reverse();
+
+    // Datum formatteren
+    const today = new Date(); today.setHours(0,0,0,0);
+    const yesterday = new Date(today); yesterday.setDate(yesterday.getDate() - 1);
+    const fmtDate = (key) => {
+      const [y, m, d] = key.split("-").map(Number);
+      const dt = new Date(y, m - 1, d);
+      if (dt.getTime() === today.getTime()) return "Vandaag";
+      if (dt.getTime() === yesterday.getTime()) return "Gisteren";
+      return dt.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+    };
+
+    // Render
+    const dayBlocks = sortedDates.slice(0, 30).map((key) => {
+      const dayEvents = byDate.get(key);
+
+      // Bundel PushEvents per repo
+      const items = [];
+      const pushByRepo = new Map();
+      for (const ev of dayEvents) {
+        if (ev.type === "PushEvent") {
+          const repo = ev.repo.name;
+          if (!pushByRepo.has(repo)) {
+            const grp = { type: "PushEvent", repo, count: 0, commits: [] };
+            pushByRepo.set(repo, grp);
+            items.push(grp);
+          }
+          const g = pushByRepo.get(repo);
+          g.count += (ev.payload && ev.payload.size) || (ev.payload && ev.payload.commits ? ev.payload.commits.length : 1);
+          for (const c of ((ev.payload && ev.payload.commits) || [])) {
+            const msg = c.message.split("\n")[0];
+            if (!g.commits.includes(msg) && g.commits.length < 5) g.commits.push(msg);
+          }
+        } else {
+          items.push({ type: ev.type, repo: ev.repo.name, payload: ev.payload });
+        }
+      }
+
+      const list = items.map((g) => {
+        const repoShort = g.repo.replace(/^[^/]+\//, "");
+        const repoUrl = `https://github.com/${g.repo}`;
+        let icon = "•", line = "";
+        let commitsList = "";
+
+        if (g.type === "PushEvent") {
+          icon = "↗";
+          line = `${g.count} ${g.count === 1 ? "commit" : "commits"} naar`;
+          if (g.commits.length) {
+            commitsList =
+              `<ul class="log-commits">${g.commits.map((m) => `<li>${escapeHtml(m)}</li>`).join("")}</ul>`;
+          }
+        } else if (g.type === "ReleaseEvent") {
+          icon = "★";
+          const tag = (g.payload && g.payload.release && g.payload.release.tag_name) || "";
+          line = `Release ${escapeHtml(tag)} van`;
+        } else if (g.type === "CreateEvent") {
+          const rt = g.payload && g.payload.ref_type;
+          if (rt === "repository") { icon = "✦"; line = "Nieuw project:"; }
+          else if (rt === "tag") { icon = "◆"; line = `Tag ${escapeHtml(g.payload.ref || "")} bij`; }
+        } else if (g.type === "PullRequestEvent") {
+          const a = g.payload && g.payload.action;
+          const n = g.payload && g.payload.pull_request && g.payload.pull_request.number;
+          if (a === "opened") { icon = "◐"; line = `PR #${n} geopend in`; }
+          else if (a === "closed" && g.payload.pull_request.merged) { icon = "●"; line = `PR #${n} gemerged in`; }
+          else if (a === "closed") { icon = "○"; line = `PR #${n} gesloten in`; }
+          else return "";
+        }
+
+        return `<li class="log-event">
+          <span class="log-event-icon" aria-hidden="true">${icon}</span>
+          <span class="log-event-line">${line} <a href="${repoUrl}" target="_blank" rel="noopener" class="log-event-repo">${escapeHtml(repoShort)}</a></span>
+          ${commitsList}
+        </li>`;
+      }).filter(Boolean).join("");
+
+      return `<article class="log-day">
+        <h2 class="log-date"><time datetime="${key}">${fmtDate(key)}</time></h2>
+        <ul class="log-events">${list}</ul>
+      </article>`;
+    }).join("");
+
+    feed.innerHTML = dayBlocks + `<p class="log-foot">Live opgehaald van <a href="https://github.com/${USER}/" target="_blank" rel="noopener">GitHub</a>. Cache vernieuwt elk uur.</p>`;
+  })();
+  </script>
+</body>
+</html>

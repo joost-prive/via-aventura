@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url><loc>https://viaaventura.nl/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://viaaventura.nl/log.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://viaaventura.nl/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <url><loc>https://viaaventura.nl/projects/clashrooms.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://viaaventura.nl/projects/emodjeez.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viaaventura.nl/projects/letterduel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viaaventura.nl/projects/het-is-niet-te-geloven.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viaaventura.nl/projects/de-snelle-hap.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viaaventura.nl/projects/olivialarm.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viaaventura.nl/projects/fases.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viaaventura.nl/projects/ready-set-bingo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viaaventura.nl/projects/vertrekcheck.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viaaventura.nl/projects/schmink-station.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viaaventura.nl/projects/tour-de-boire.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viaaventura.nl/projects/pluk-de-tijd.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viaaventura.nl/projects/begrijpend-tuben.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+</urlset>

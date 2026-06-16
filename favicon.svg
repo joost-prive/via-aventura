@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Via Aventura">
+  <defs>
+    <linearGradient id="va-bronze" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#d4ad6e"/>
+      <stop offset=".45" stop-color="#a87a3a"/>
+      <stop offset=".75" stop-color="#7a5224"/>
+      <stop offset="1"   stop-color="#5a8775"/>
+    </linearGradient>
+    <linearGradient id="va-bronze-shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="10" fill="#e8e9ec"/>
+  <g font-family="Cinzel, 'Trajan Pro', Georgia, serif" font-weight="700" font-size="42" text-anchor="middle">
+    <text x="20" y="44" fill="url(#va-bronze)">V</text>
+    <text x="44" y="44" fill="url(#va-bronze)">A</text>
+    <text x="20" y="44" fill="url(#va-bronze-shade)">V</text>
+    <text x="44" y="44" fill="url(#va-bronze-shade)">A</text>
+  </g>
+  <circle cx="54" cy="56" r="1.2" fill="#cfd2d9"/>
+</svg>

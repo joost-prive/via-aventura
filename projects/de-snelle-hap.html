@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>De Snelle Hap — Via Aventura</title>
+  <meta name="description" content="Voice-bestelling — een project uit het portfolio van Joost van de Ven (Via Aventura)." />
+  <link rel="canonical" href="https://viaaventura.nl/projects/de-snelle-hap.html" />
+  <meta name="theme-color" content="#c0492a" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="De Snelle Hap — Via Aventura" />
+  <meta property="og:description" content="Voice-bestelling" />
+  <meta property="og:image" content="https://viaaventura.nl/og-image.jpg" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="project-page">
+
+  <a href="#main" class="skip-link">Direct naar de inhoud</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Via Aventura — home">
+      <img src="/logo-256.png" alt="" class="brand-mark" />
+      <span class="brand-name">Via Aventura</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="primary-nav" aria-label="Hoofdnavigatie">
+      <a href="/#about">Over</a>
+      <a href="/#code">Code</a>
+      <a href="/#creatief">Creatief</a>
+      <a href="mailto:joost@viaaventura.nl">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <p class="breadcrumb">
+      <a href="/">Via Aventura</a><span class="sep">/</span><a href="/#code">Codeerprojecten</a><span class="sep">/</span>De Snelle Hap
+    </p>
+
+    <article>
+      <header class="project-hero">
+        <p class="project-num-big">05.</p>
+        <h1>De Snelle Hap</h1>
+        <p class="project-tagline"><em>Voice-bestelling</em></p>
+        <div class="project-pills">
+          <span class="project-pill">Tool</span>
+          <span class="project-pill">2025</span>
+          <span class="project-pill status-wip">Prototype</span>
+        </div>
+      </header>
+
+      <figure class="project-image">
+        <img src="/images/snackbar.jpg" alt="De Snelle Hap — concept-impressie van een snackbar met voice-bestelling" width="1200" height="800" loading="lazy"/>
+      </figure>
+
+      <div class="project-body">
+        <h2>Het verhaal</h2>
+        <p>Snackbar waar je met je stem bestelt. Geen menu doorscrollen, geen toetsen — gewoon zeggen wat je wil en seconden later staat je bestelling klaar. Een experiment in voice-first interfaces voor het kortst denkbare beslissings­moment: hap-honger.</p>
+
+        <h2>Waarom</h2>
+        <p>Bestellen is een UX-probleem dat al jaren niet wezenlijk veranderd is. Voice + LLM's maken een nieuwe poging eindelijk haalbaar — vooral op een plek waar mensen sowieso vooral met hun mond bezig zijn.</p>
+
+        <h2>Onder de motorkap</h2>
+        <div class="chips"><span class="chip">Web Speech API</span><span class="chip">LLM-parsing</span><span class="chip">TTS</span><span class="chip">PWA</span></div>
+
+        <h2>Wat ik leerde</h2>
+        <p>Voice werkt verrassend goed in stille omgevingen en breekt direct in drukke. De UX-uitdaging is niet de stem, maar de noise floor.</p>
+      </div>
+
+      <div class="project-cta">
+        <a class="btn btn-primary" href="https://github.com/joost-prive/desnellehap" target="_blank" rel="noopener">Repo op GitHub &rarr;</a>
+        <a class="btn btn-outline" href="/#code">&larr; Naar overzicht</a>
+      </div>
+
+      <nav class="project-nav" aria-label="Vorig en volgend project">
+        <a href="/projects/het-is-niet-te-geloven.html" class="prev"><span>04 · Vorige</span><strong>Het is niet te geloven</strong></a>
+        <a href="/projects/olivialarm.html" class="next"><span>06 · Volgende</span><strong>OliviAlarm</strong></a>
+      </nav>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span><a href="mailto:joost@viaaventura.nl">joost@viaaventura.nl</a></span>
+      <span><a href="/log.html">Build log</a></span>
+      <span><a href="/privacy.html">Privacy &amp; colofon</a></span>
+      <span class="muted">© <span id="year"></span> · Via Aventura B.V. · KvK 00000000</span>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Via Aventura — Projecten van Joost van de Ven</title>
+  <meta name="description" content="Via Aventura is de holding van Joost van de Ven — een verzameling codeerprojecten en andere creatieve avonturen, opgericht voor ClashRooms." />
+  <meta name="author" content="Joost van de Ven" />
+  <link rel="canonical" href="https://viaaventura.nl/" />
+  <meta name="theme-color" content="#c0492a" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://viaaventura.nl/" />
+  <meta property="og:title" content="Via Aventura — De avontuurlijke weg" />
+  <meta property="og:description" content="De holding van Joost van de Ven — een verzameling codeer­projecten en andere creatieve avonturen." />
+  <meta property="og:image" content="https://viaaventura.nl/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Via Aventura" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Via Aventura — De avontuurlijke weg" />
+  <meta name="twitter:description" content="Codeer­projecten en creatieve avonturen van Joost van de Ven." />
+  <meta name="twitter:image" content="https://viaaventura.nl/og-image.jpg" />
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://viaaventura.nl/#website",
+        "url": "https://viaaventura.nl/",
+        "name": "Via Aventura",
+        "description": "Holding van Joost van de Ven — portfolio van projecten.",
+        "inLanguage": "nl-NL"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://viaaventura.nl/#joost",
+        "name": "Joost van de Ven",
+        "url": "https://viaaventura.nl/",
+        "sameAs": [
+          "https://github.com/joost-prive/",
+          "https://clashrooms.nl"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Via Aventura B.V.",
+          "url": "https://viaaventura.nl/"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://viaaventura.nl/#org",
+        "name": "Via Aventura B.V.",
+        "url": "https://viaaventura.nl/",
+        "logo": "https://viaaventura.nl/icon-512.png",
+        "founder": { "@id": "https://viaaventura.nl/#joost" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Plausible (uncomment + vul je domein in om analytics te activeren) -->
+  <!-- <script defer data-domain="viaaventura.nl" src="https://plausible.io/js/script.js"></script> -->
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Direct naar de inhoud</a>
+
+  <h1 class="visually-hidden">Via Aventura — projecten van Joost van de Ven</h1>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Via Aventura — home">
+      <img src="/logo-256.png" alt="" class="brand-mark" />
+      <span class="brand-name">Via Aventura</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="primary-nav" aria-label="Hoofdnavigatie">
+      <a href="#about">Over</a>
+      <a href="#code">Code</a>
+      <a href="#creatief">Creatief</a>
+      <a href="mailto:joost@viaaventura.nl">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top" tabindex="-1"><a id="main"></a>
+
+    <!-- ============== INTRO (quote + about, side-by-side) ============== -->
+    <section id="about" class="intro">
+      <div class="intro-grid">
+        <blockquote class="manifesto">
+          <p>
+            Vroeger had ik een miljoen ideeën maar
+            nog <em>nauwelijks</em> programmeer­skills.
+            Toen kwam <em>AI</em>.
+            Nu heb ik een miljoen ideeën en nog <em>nauwelijks</em> bereik.
+            Vandaar deze website.
+          </p>
+        </blockquote>
+
+        <div class="intro-about">
+          <h2>Over Via Aventura</h2>
+          <p>
+            Deze website is van Joost van de Ven. Mijn BV
+            Via Aventura is opgericht om te kunnen starten met
+            ons bedrijf <a href="https://clashrooms.nl" target="_blank" rel="noopener">ClashRooms</a>.
+            Toen AI opkwam raakte ik in een creatieve flow en heb ik deze website
+            opgezet om mijn projecten te kunnen tonen.
+          </p>
+          <p>
+            De naam Via Aventura is afkomstig uit mijn voorliefde voor Rome,
+            de wens om avonturen aan te gaan en de hook om mijn achternaam
+            terug te laten komen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CODEERPROJECTEN ============== -->
+    <section id="code" class="section">
+      <header class="section-head">
+        <h2>Codeer­projecten</h2>
+      </header>
+
+      <div class="filter" role="tablist" aria-label="Filter projecten">
+        <button class="filter-btn is-active" data-filter="all">Alles</button>
+        <button class="filter-btn" data-filter="game">Spel</button>
+        <button class="filter-btn" data-filter="tool">Tool</button>
+        <button class="filter-btn" data-filter="site">Site</button>
+        <button class="filter-btn" data-filter="experiment">Experiment</button>
+      </div>
+
+      <div class="works" id="projectGrid">
+
+        <!-- 01 — ClashRooms -->
+        <article class="work" data-cat="site">
+          <a class="work-media" href="/projects/clashrooms.html">
+            <img src="images/clashrooms.jpg" alt="Een ClashRooms-locatie tijdens een groepsavond — een team in actie tussen gekleurde verlichting" loading="lazy" width="1400" height="933"/>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">01</span><span class="work-cat">Site · tools</span></p>
+            <h3>ClashRooms</h3>
+            <p class="work-tag"><em>Social gaming locaties</em></p>
+            <p>
+              Het oorspronkelijke avontuur waarvoor Via Aventura is opgericht. Een nieuwe vorm van
+              social gaming: groepen die het tegen elkaar opnemen in fysieke ruimtes vol games,
+              lichten en geluid. Inmiddels uitgegroeid tot een ecosysteem — meerdere websites
+              voor NL en EU, en een familie aan interne tools voor reviews, advertenties,
+              groepsfoto's, mail-flows en captcha-experimenten. Het project waar ik nog
+              steeds elke week iets aan ontwikkel.
+            </p>
+            <a class="work-link" href="https://clashrooms.nl" target="_blank" rel="noopener">clashrooms.nl →</a>
+          </div>
+        </article>
+
+        <!-- 02 — Emodjeez -->
+        <article class="work" data-cat="game">
+          <a class="work-media" href="/projects/emodjeez.html">
+            <img src="images/emodjeez.jpg" alt="Screenshot van het startscherm van de Emodjeez emoji-quiz app" loading="lazy" width="900" height="900"/>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">02</span><span class="work-cat">Spel</span></p>
+            <h3>Emodjeez</h3>
+            <p class="work-tag"><em>Emoji quiz</em></p>
+            <p>
+              De ultieme emoji-quiz. Krijg een emoji te zien en raad in welke categorie hij hoort —
+              en voor de fanatici is er een 1v1-modus waarin je het tegen vrienden opneemt.
+              Gebouwd als Android-app met een geautomatiseerde social-media pijplijn die elke
+              dag een nieuwe ronde plus bijbehorende posts uitspuwt. Klein, dagelijks, verslavend.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/emodjeez" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+        <!-- 03 — LetterDuel -->
+        <article class="work" data-cat="game">
+          <a class="work-media" href="/projects/letterduel.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g transform="translate(110 75) rotate(-6)">
+                <rect x="0" y="0" width="100" height="120" rx="8" fill="#fff8e8" stroke="#7a4a1f" stroke-width="1.5"/>
+                <text x="50" y="82" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="64" font-weight="600">L</text>
+                <text x="84" y="108" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="14">3</text>
+              </g>
+              <g transform="translate(210 105) rotate(8)">
+                <rect x="0" y="0" width="100" height="120" rx="8" fill="#fff8e8" stroke="#7a4a1f" stroke-width="1.5"/>
+                <text x="50" y="82" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="64" font-weight="600">D</text>
+                <text x="84" y="108" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="14">2</text>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">03</span><span class="work-cat">Spel</span></p>
+            <h3>LetterDuel</h3>
+            <p class="work-tag"><em>Dagelijks woordspel</em></p>
+            <p>
+              Een dagelijks woordspelletje van precies de juiste lengte: kort genoeg voor
+              een koffiepauze, lang genoeg om iets te bewijzen. Geïnspireerd op klassieke
+              letterspellen, teruggebracht tot de essentie. Eén woord, één dag, één kans —
+              dezelfde puzzel voor jou en je vrienden, om daarna nog even na te kletsen
+              wie wat als eerste zag.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/LetterDuel" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+        <!-- 04 — Het is niet te geloven -->
+        <article class="work" data-cat="site">
+          <a class="work-media" href="/projects/het-is-niet-te-geloven.html">
+            <img src="images/psv.jpg" alt="Iconisch PSV-moment uit het Eindhovense voetbalarchief, jaargang 2016" loading="lazy" width="1400" height="933"/>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">04</span><span class="work-cat">Site</span></p>
+            <h3>Het is niet te geloven</h3>
+            <p class="work-tag"><em>PSV-verhalen</em></p>
+            <p>
+              Een verzameling van de meest magische, legendarische, ongelooflijke
+              PSV-momenten. Van het kampioenschap van 1963 tot vandaag, gerangschikt
+              als een tijdreis die je rustig kunt doorscrollen. Gemaakt voor supporters die
+              deze verhalen toch al elke borrel opnieuw vertellen — alleen nu met de foto's,
+              datums en namen erbij om de discussie te beslechten.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/hetisniettegeloven" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+        <!-- 05 — De Snelle Hap -->
+        <article class="work" data-cat="tool">
+          <a class="work-media" href="/projects/de-snelle-hap.html">
+            <img src="images/snackbar.jpg" alt="De Snelle Hap — concept-impressie van een snackbar met voice-bestelling" loading="lazy" width="1200" height="800"/>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">05</span><span class="work-cat">Tool</span></p>
+            <h3>De Snelle Hap</h3>
+            <p class="work-tag"><em>Voice-bestelling</em></p>
+            <p>
+              Snackbar waar je met je stem bestelt. Geen menu doorscrollen, geen toetsen —
+              gewoon zeggen wat je wil en seconden later staat je bestelling klaar.
+              Een experiment in voice-first interfaces voor het kortst denkbare beslissings­moment:
+              hap-honger. Werkt verrassend goed, behalve als er een trambel naast je staat
+              te rinkelen.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/desnellehap" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+        <!-- 06 — OliviAlarm -->
+        <article class="work" data-cat="tool">
+          <a class="work-media" href="/projects/olivialarm.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M150 80 Q130 60 130 50 Q130 35 150 35" fill="#fff8e8"/>
+                <path d="M250 80 Q270 60 270 50 Q270 35 250 35" fill="#fff8e8"/>
+                <circle cx="200" cy="170" r="80" fill="#fff8e8"/>
+                <circle cx="200" cy="170" r="70" stroke-dasharray="2 5"/>
+                <line x1="200" y1="170" x2="200" y2="120"/>
+                <line x1="200" y1="170" x2="240" y2="170"/>
+                <circle cx="200" cy="170" r="4" fill="#7a4a1f"/>
+                <line x1="200" y1="100" x2="200" y2="108"/>
+                <line x1="200" y1="232" x2="200" y2="240"/>
+                <line x1="130" y1="170" x2="138" y2="170"/>
+                <line x1="262" y1="170" x2="270" y2="170"/>
+                <text x="200" y="262" text-anchor="middle" fill="#c0492a" font-family="Fraunces, serif" font-size="18" font-style="italic" stroke="none">06:30</text>
+                <line x1="150" y1="248" x2="135" y2="265"/>
+                <line x1="250" y1="248" x2="265" y2="265"/>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">06</span><span class="work-cat">Tool</span></p>
+            <h3>OliviAlarm</h3>
+            <p class="work-tag"><em>Wakker-wanneer-mag</em></p>
+            <p>
+              Een wekker die helpt mijn dochter Olivia te leren dat ze om 06:30 uit bed mag —
+              en niet eerder. Telt rustig af, geeft een zacht kindvriendelijk signaal zodra
+              het zo ver is. Het soort tool dat alleen ontstaat als je zelf ouder bent en al
+              een tijdje 'kun je nog even een uurtje blijven liggen' zegt tegen iemand die
+              op 05:45 vrolijk klaarwakker is.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/OliviAlarm" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+        <!-- 07 — Fases -->
+        <article class="work" data-cat="site">
+          <a class="work-media" href="/projects/fases.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" fill="none" stroke-width="1.5">
+                <rect x="120" y="60" width="180" height="200" rx="4" fill="#fff8e8"/>
+                <rect x="120" y="60" width="180" height="40" fill="#ecdcb4"/>
+                <line x1="140" y1="50" x2="140" y2="70" stroke-linecap="round"/>
+                <line x1="160" y1="50" x2="160" y2="70" stroke-linecap="round"/>
+                <line x1="180" y1="50" x2="180" y2="70" stroke-linecap="round"/>
+                <line x1="200" y1="50" x2="200" y2="70" stroke-linecap="round"/>
+                <line x1="220" y1="50" x2="220" y2="70" stroke-linecap="round"/>
+                <line x1="240" y1="50" x2="240" y2="70" stroke-linecap="round"/>
+                <line x1="260" y1="50" x2="260" y2="70" stroke-linecap="round"/>
+                <line x1="280" y1="50" x2="280" y2="70" stroke-linecap="round"/>
+                <text x="210" y="92" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="22" font-style="italic" stroke="none">November</text>
+                <line x1="140" y1="120" x2="280" y2="120" opacity=".5"/>
+                <line x1="140" y1="140" x2="270" y2="140" opacity=".5"/>
+                <line x1="140" y1="160" x2="276" y2="160" opacity=".5"/>
+                <line x1="140" y1="180" x2="264" y2="180" opacity=".5"/>
+                <line x1="140" y1="200" x2="272" y2="200" opacity=".5"/>
+                <line x1="140" y1="220" x2="258" y2="220" opacity=".5"/>
+                <line x1="140" y1="240" x2="270" y2="240" opacity=".5"/>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">07</span><span class="work-cat">Site</span></p>
+            <h3>Fases</h3>
+            <p class="work-tag"><em>Maandboek voor je gezin</em></p>
+            <p>
+              Geen dagboek, een maand­boek. Tien vragen per maand over je gezin, je werk,
+              je gedachten — bewust minimale inspanning, want anders houd je het toch niet vol.
+              Jaren later zit je dan met een handvol pagina's per fase: een terugblik die
+              niet bestaat als je nooit even tien minuutjes hebt genomen om hem op te schrijven.
+            </p>
+            <a class="work-link" href="#" data-soon>live →</a>
+          </div>
+        </article>
+
+        <!-- 08 — Ready Set Bingo -->
+        <article class="work" data-cat="game">
+          <a class="work-media" href="/projects/ready-set-bingo.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" stroke-width="1.5">
+                <circle cx="120" cy="170" r="40" fill="#ecdcb4"/>
+                <text x="120" y="178" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="22" font-weight="500" stroke="none">B7</text>
+                <circle cx="200" cy="120" r="44" fill="#fff8e8"/>
+                <text x="200" y="128" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="22" font-weight="500" stroke="none">I22</text>
+                <circle cx="280" cy="160" r="38" fill="#ecdcb4"/>
+                <text x="280" y="168" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="20" font-weight="500" stroke="none">N15</text>
+                <circle cx="160" cy="230" r="36" fill="#fff8e8"/>
+                <text x="160" y="238" text-anchor="middle" fill="#7a4a1f" font-family="Fraunces, serif" font-size="20" font-weight="500" stroke="none">G44</text>
+                <circle cx="250" cy="240" r="40" fill="#ecdcb4"/>
+                <text x="250" y="248" text-anchor="middle" fill="#c0492a" font-family="Fraunces, serif" font-size="22" font-weight="500" stroke="none">O60</text>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">08</span><span class="work-cat">Spel</span></p>
+            <h3>Ready Set Bingo</h3>
+            <p class="work-tag"><em>Bingo, maar leuk</em></p>
+            <p>
+              Digitale bingo-host voor feestjes, kinderpartijtjes en bedrijfsuitjes —
+              sneller opgezet dan dat je de balletjes uit de zolder hebt gehaald. Trek
+              de balletjes, draai het rad, roep nummers uit. Allemaal vanuit je broekzak,
+              en met een halve minuut voorbereidingstijd. Werkt onverwacht goed op een
+              campervakantie zonder netwerk.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/ReadySetBingo" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+        <!-- 09 — Vertrekcheck -->
+        <article class="work" data-cat="tool">
+          <a class="work-media" href="/projects/vertrekcheck.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M140 110 L140 250 Q140 270 160 270 L240 270 Q260 270 260 250 L260 110 Q260 80 230 80 L170 80 Q140 80 140 110 Z" fill="#ecdcb4"/>
+                <path d="M180 80 Q180 50 200 50 Q220 50 220 80"/>
+                <rect x="160" y="160" width="80" height="80" rx="6" fill="#fff8e8"/>
+                <line x1="160" y1="195" x2="240" y2="195" stroke-dasharray="2 3"/>
+                <circle cx="240" cy="195" r="4" fill="#c0492a"/>
+                <line x1="158" y1="110" x2="158" y2="250"/>
+                <line x1="242" y1="110" x2="242" y2="250"/>
+                <line x1="178" y1="125" x2="222" y2="125" opacity=".5"/>
+                <line x1="178" y1="140" x2="222" y2="140" opacity=".5"/>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">09</span><span class="work-cat">Tool</span></p>
+            <h3>Vertrekcheck</h3>
+            <p class="work-tag"><em>Schoolkind-checklist</em></p>
+            <p>
+              Een gepersonaliseerde check voor elk schoolkind voordat het de deur uit
+              gaat: de juiste outfit voor het weer van vandaag, de spullen die voor dít
+              rooster in de tas moeten, eventuele bijzondere afspraken. Drukt de mentale
+              last van de ochtendspits omlaag voor ouders die nu nog zelf alles in het
+              hoofd jongleren tussen koffie en sokken zoeken.
+            </p>
+            <a class="work-link" href="#" data-soon>live →</a>
+          </div>
+        </article>
+
+        <!-- 10 — Schmink Station -->
+        <article class="work" data-cat="tool">
+          <a class="work-media" href="/projects/schmink-station.html">
+            <img src="images/schmink.svg" alt="Carnaval-schmink illustratie: kindergezicht met paars-gele vlindervleugel-make-up" loading="lazy"/>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">10</span><span class="work-cat">Tool</span></p>
+            <h3>Schmink Station</h3>
+            <p class="work-tag"><em>Carnaval makeup</em></p>
+            <p>
+              Een schmink-app voor carnaval, voor wie geen zin heeft om op
+              vrijdagavond half een eindeloos naar plaatjes te googelen. Honderden
+              looks gerangschikt in categorieën, met zoekfunctie en favorieten —
+              zodat je 's ochtends in de polonaise weet welke kant je op moet.
+              Gebouwd in de aanloop naar één specifieke editie.
+            </p>
+            <a class="work-link" href="#" data-soon>live →</a>
+          </div>
+        </article>
+
+        <!-- 11 — Tour de Boire -->
+        <article class="work" data-cat="experiment">
+          <a class="work-media" href="/projects/tour-de-boire.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="120" cy="210" r="50" fill="#fff8e8"/>
+                <circle cx="280" cy="210" r="50" fill="#fff8e8"/>
+                <g opacity=".35">
+                  <line x1="120" y1="160" x2="120" y2="260"/>
+                  <line x1="70"  y1="210" x2="170" y2="210"/>
+                  <line x1="85"  y1="175" x2="155" y2="245"/>
+                  <line x1="85"  y1="245" x2="155" y2="175"/>
+                  <line x1="280" y1="160" x2="280" y2="260"/>
+                  <line x1="230" y1="210" x2="330" y2="210"/>
+                  <line x1="245" y1="175" x2="315" y2="245"/>
+                  <line x1="245" y1="245" x2="315" y2="175"/>
+                </g>
+                <line x1="120" y1="210" x2="210" y2="130"/>
+                <line x1="210" y1="130" x2="280" y2="210"/>
+                <line x1="120" y1="210" x2="210" y2="210"/>
+                <line x1="210" y1="130" x2="210" y2="210"/>
+                <line x1="195" y1="130" x2="230" y2="130" stroke-width="3"/>
+                <path d="M210 130 L242 96 L266 86"/>
+                <line x1="252" y1="92" x2="278" y2="92"/>
+                <rect x="200" y="155" width="14" height="32" rx="2" fill="#c0492a" stroke="#c0492a"/>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">11</span><span class="work-cat">Experiment</span></p>
+            <h3>Tour de Boire</h3>
+            <p class="work-tag"><em>Vriendenklassement</em></p>
+            <p>
+              Elk jaar opnieuw een klein, eigen klassement onder vrienden tijdens de
+              Tour de France. Helft koers, helft kroeg — voorspellen, punten halen,
+              spuwen op elkaars keuzes. De editie van 2026 zit in de pijplijn; wie weet
+              wint dit jaar iemand iets anders dan een biertje of de eer.
+            </p>
+            <a class="work-link" href="#" data-soon>live →</a>
+          </div>
+        </article>
+
+        <!-- 12 — Pluk de Tijd -->
+        <article class="work" data-cat="experiment">
+          <a class="work-media" href="/projects/pluk-de-tijd.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="145" y1="55" x2="255" y2="55" stroke-width="3"/>
+                <line x1="145" y1="245" x2="255" y2="245" stroke-width="3"/>
+                <path d="M155 55 L155 100 L195 150 L155 200 L155 245" fill="#fff8e8"/>
+                <path d="M245 55 L245 100 L205 150 L245 200 L245 245" fill="#fff8e8"/>
+                <path d="M165 75 L165 100 L195 145 L205 145 L235 100 L235 75 Z" fill="#ecdcb4" stroke="none"/>
+                <line x1="200" y1="150" x2="200" y2="205" stroke-dasharray="2 4"/>
+                <path d="M170 225 Q200 205 230 225 L230 235 L170 235 Z" fill="#ecdcb4" stroke="none"/>
+                <path d="M285 105 Q310 115 318 138 Q305 148 285 138 Q278 120 285 105 Z" fill="#c0492a" stroke="none" opacity=".7"/>
+                <line x1="290" y1="138" x2="300" y2="170"/>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">12</span><span class="work-cat">Experiment</span></p>
+            <h3>Pluk de Tijd</h3>
+            <p class="work-tag"><em>Bewuste momenten</em></p>
+            <p>
+              Een poëtisch experiment over hoe we tijd ervaren en wat het waard is
+              om vast te leggen. Minder software, meer reflectie. Gemaakt meer voor
+              mij dan voor gebruikers — maar als jij hier ook al even stil naar zit
+              te kijken, ben je waarschijnlijk precies de doelgroep.
+            </p>
+            <a class="work-link" href="#" data-soon>live →</a>
+          </div>
+        </article>
+
+        <!-- 13 — Begrijpend Tuben -->
+        <article class="work" data-cat="site">
+          <a class="work-media" href="/projects/begrijpend-tuben.html">
+            <svg viewBox="0 0 400 300" class="illustration" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#7a4a1f" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="100" y="80" width="200" height="140" rx="6" fill="#fff8e8"/>
+                <line x1="200" y1="80" x2="200" y2="220"/>
+                <polygon points="140,130 140,170 175,150" fill="#c0492a" stroke="#c0492a"/>
+                <line x1="215" y1="120" x2="285" y2="120" opacity=".6"/>
+                <line x1="215" y1="135" x2="275" y2="135" opacity=".6"/>
+                <line x1="215" y1="150" x2="282" y2="150" opacity=".6"/>
+                <line x1="215" y1="165" x2="265" y2="165" opacity=".6"/>
+                <line x1="215" y1="180" x2="278" y2="180" opacity=".6"/>
+                <line x1="170" y1="220" x2="170" y2="240"/>
+                <line x1="230" y1="220" x2="230" y2="240"/>
+                <line x1="150" y1="240" x2="250" y2="240" stroke-width="2"/>
+              </g>
+            </svg>
+          </a>
+          <div class="work-body">
+            <p class="work-meta"><span class="work-num">13</span><span class="work-cat">Site</span></p>
+            <h3>Begrijpend Tuben</h3>
+            <p class="work-tag"><em>Begrijpend lezen 2.0</em></p>
+            <p>
+              Begrijpend lezen voor de YouTube-generatie. In plaats van een lap tekst
+              krijgen leerlingen een korte clip, en daarna de vragen — zelfde
+              vaardigheid, ander medium. Een Cloudflare-gehoste leeromgeving die
+              docenten kunnen inzetten op de momenten dat een tekst voor deze klas
+              toch echt geen optie is.
+            </p>
+            <a class="work-link" href="https://github.com/joost-prive/begrijpendtuben-cloudflare" target="_blank" rel="noopener">repo →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="more-line">
+        Plus tientallen kleinere experimenten en scripts —
+        <a href="https://github.com/joost-prive/" target="_blank" rel="noopener">github.com/joost-prive</a>
+      </p>
+    </section>
+
+    <div class="ornament" aria-hidden="true">
+      <span class="orn-line"></span>
+      <svg viewBox="0 0 60 24" class="orn-mark">
+        <g fill="#b88736">
+          <circle cx="30" cy="12" r="2.5"/>
+          <ellipse cx="14" cy="12" rx="5" ry="2" transform="rotate(-15 14 12)"/>
+          <ellipse cx="22" cy="12" rx="5" ry="2"/>
+          <ellipse cx="46" cy="12" rx="5" ry="2" transform="rotate(15 46 12)"/>
+          <ellipse cx="38" cy="12" rx="5" ry="2"/>
+        </g>
+      </svg>
+      <span class="orn-line"></span>
+    </div>
+
+    <!-- ============== OVERIGE CREATIEVE PROJECTEN ============== -->
+    <section id="creatief" class="section creative">
+      <header class="section-head">
+        <h2>Overige creatieve projecten</h2>
+      </header>
+
+      <div class="atelier">
+
+        <article class="atelier-row">
+          <span class="atelier-letter">A</span>
+          <div class="atelier-body">
+            <h3>Liedjes voor PSV</h3>
+            <p class="atelier-tag"><em>Eindhoven's Finest · songwriter</em></p>
+            <p>
+              Als songwriter binnen Eindhoven's Finest schrijf ik mee aan
+              supportersliederen voor PSV. Een paar nummers staan op Spotify.
+            </p>
+            <a class="atelier-link" href="https://open.spotify.com/search/eindhoven's%20finest" target="_blank" rel="noopener">Spotify →</a>
+          </div>
+        </article>
+
+        <article class="atelier-row">
+          <span class="atelier-letter">B</span>
+          <div class="atelier-body">
+            <h3>Natuurspeeltuin Helvoirt</h3>
+            <p class="atelier-tag"><em>Buurt · hout · modder</em></p>
+            <p>
+              Mede-initiatiefnemer van een natuurspeeltuin in Helvoirt — een plek
+              waar kinderen klimmen, bouwen en buiten zijn.
+            </p>
+            <a class="atelier-link" href="http://facebook.com/natuurspeeltuinhelvoirt" target="_blank" rel="noopener">Facebook →</a>
+          </div>
+        </article>
+
+        <article class="atelier-row">
+          <span class="atelier-letter">C</span>
+          <div class="atelier-body">
+            <h3>Spellen bedenken</h3>
+            <p class="atelier-tag"><em>Vooral voor ClashRooms</em></p>
+            <p>
+              Het hart van ClashRooms is een groeiende verzameling games — en
+              de meeste komen uit mijn hoofd. Regels schrijven is een ambacht apart.
+            </p>
+            <a class="atelier-link" href="https://clashrooms.nl" target="_blank" rel="noopener">ClashRooms →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span><a href="mailto:joost@viaaventura.nl">joost@viaaventura.nl</a></span>
+      <span><a href="/log.html">Build log</a></span>
+      <span><a href="https://github.com/joost-prive/" target="_blank" rel="noopener">GitHub</a></span>
+      <span><a href="/privacy.html">Privacy &amp; colofon</a></span>
+      <span class="muted">© <span id="year"></span> · Via Aventura B.V. · KvK 00000000</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
