@@ -1275,6 +1275,42 @@ a.work-media:focus-visible::after {
 }
 
 /* =========================================================================
+   CLASHROOMS — single-column atelier rows + subsection title
+   ========================================================================= */
+
+#clashrooms .atelier-row {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 720px) {
+  #clashrooms .atelier-row { grid-template-columns: 1fr; }
+}
+
+/* Center the internal-tools block at reading width so it doesn't float left
+   in an empty wide row on desktop */
+#clashrooms .subsection-title,
+#clashrooms .atelier {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subsection-title {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--terracotta);
+  font-weight: 500;
+  margin: 48px 0 8px;
+  font-variation-settings: "opsz" 144;
+}
+
+/* Two work-links side-by-side (live + repo) */
+.work-link + .work-link { margin-left: 18px; }
+@media (max-width: 600px) {
+  .work-link + .work-link { margin-left: 0; margin-top: 8px; }
+}
+
+/* =========================================================================
    PRINT STYLESHEET
    ========================================================================= */
 
