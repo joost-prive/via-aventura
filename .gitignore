@@ -1,5 +1,5 @@
 # Local Claude Code settings
-.claude/settings.local.json
+.claude/
 
 # OS junk
 Thumbs.db
