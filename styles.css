@@ -532,6 +532,7 @@ h2 em, h3 em {
   padding-bottom: 2px;
 }
 .atelier-link:hover { color: var(--terracotta); }
+.atelier-link + .atelier-link { margin-left: 18px; }
 
 /* =========================================================================
    FOOTER
